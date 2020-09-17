@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="8dp"
+    android:background="@drawable/border"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:background="?selectableItemBackgroundBorderless"
+        android:id="@+id/category_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:padding="10dp"
+            android:id="@+id/category_image"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-5dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/category_title"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_below="@id/category_image"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <TextView
+            android:padding="1dp"
+            android:textSize="8sp"
+            android:id="@+id/category_discount"
+            android:gravity="center"
+            android:background="@drawable/cart_count_drawable"
+            android:lineSpacingExtra="-2dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/white"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="10%\noff"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

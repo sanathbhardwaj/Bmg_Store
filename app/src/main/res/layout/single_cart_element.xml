@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/product_image"
+        android:layout_width="60dp"
+        android:src="@color/colorAccent"
+        android:layout_height="60dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@+id/product_image">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Amul Cheese Slices"/>
+
+        <TextView
+            android:id="@+id/product_quantity"
+            android:layout_below="@id/product_name"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="500gm"/>
+
+        <TextView
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/discounted_price"
+            android:layout_below="@id/product_quantity"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:text="Rs 230"
+            android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_marginTop="-8dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/add_sub"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_below="@id/product_quantity"
+            android:textColor="@color/white"
+            android:weightSum="3.0">
+            <TextView
+                android:id="@+id/reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="-"
+                android:background="@drawable/temp_text"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="14sp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/increase"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_regular"
+                android:background="@drawable/temp_text"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="+"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

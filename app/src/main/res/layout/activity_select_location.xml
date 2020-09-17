@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digital.dhanbadbasket.SelectLocationActivity">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <ImageButton
+            android:padding="5dp"
+            android:id="@+id/backarrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="Select Location"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_above="@id/form"
+        android:id="@+id/jkl"
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rb_color="@color/light_grey"
+            app:rb_duration="3000"
+            app:rb_radius="32dp"
+            app:rb_rippleAmount="4"
+            app:rb_scale="6"
+            app:rb_type="strokeRipple">
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_marginBottom="25dp"
+                android:layout_above="@id/ko"
+                android:elevation="8dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/complete_address">
+
+                <TextView
+                    android:id="@+id/op"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Address"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/op"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="City Centre, LC Road, Dhanbad, Jharkhand City Centre, LC Road, Dhanbad, Jharkhand"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ko"
+                android:elevation="5dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_location"
+                android:translationY="-19dp" />
+        </com.skyfishjy.library.RippleBackground>
+
+        <ImageButton
+            android:id="@+id/imgMyLocation"
+            android:background="@drawable/cicle_layout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/ic_gps_white"/>
+        <ImageButton
+            android:id="@+id/form_opener"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:elevation="5dp"
+            android:background="@drawable/cicle_layout_2"
+            android:src="@drawable/ic_down_arrow_2"/>
+        `
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/white"
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/tp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/house_no"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:hint="House No.*"
+                        android:theme="@style/MyEditTextTheme"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="8dp"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/apartment"
+                        android:textSize="14sp"
+                        android:hint="House/ Apartment name*"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:theme="@style/MyEditTextTheme"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="8dp"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/fp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/tp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/street"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="Street details. (OPTIONAL)"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/fq"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/fp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/landmark"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="Famous landmark near you. (OPTIONAL)"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="8dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/save"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE ADDRESS"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3.0">
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:id="@+id/l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_pin" />
+
+                <TextView
+                    android:id="@+id/current_Sub_Locality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:text="Locating..."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/l"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_address"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_border_radius"
+                android:text="CONFIRM LOCATION"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

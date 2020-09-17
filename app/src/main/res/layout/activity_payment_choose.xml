@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PaymentChooseActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:showDividers="middle"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_centerVertical="true"
+            android:id="@+id/backarrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center"/>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/appbar"
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dropshadow" />
+
+    <ScrollView
+        android:layout_above="@id/button"
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shadow_view"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text=""
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Choose Payment Option"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center_vertical"/>
+
+            <androidx.cardview.widget.CardView
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/opti"
+                android:background="@color/white"
+                android:layout_below="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="6.0"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/paytm_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/paytm"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <RadioButton
+                            android:clickable="false"
+                            android:layout_toRightOf="@id/img1"
+                            android:layoutDirection="rtl"
+                            android:id="@+id/paytm"
+                            android:text="Paytm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                        <View
+                            android:id="@+id/shadow_view1"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="1dp"
+                            android:background="@drawable/dropshadow" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/phone_pe_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/phonepe"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <RadioButton
+                            android:layout_toRightOf="@id/img2"
+                            android:layoutDirection="rtl"
+                            android:id="@+id/phonepe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="PhonePe"/>
+
+                        <View
+                            android:id="@+id/shadow_view2"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="1dp"
+                            android:background="@drawable/dropshadow" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/gpay_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/gpay"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <RadioButton
+                            android:layout_toRightOf="@id/img3"
+                            android:layoutDirection="rtl"
+                            android:id="@+id/gpay"
+                            android:text="Google Pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                        <View
+                            android:id="@+id/shadow_view3"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="1dp"
+                            android:background="@drawable/dropshadow" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/amazonpay_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="45dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/amazon_pay"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <RadioButton
+                            android:layout_toRightOf="@id/img5"
+                            android:layoutDirection="rtl"
+                            android:id="@+id/amazonpay"
+                            android:text="Amazon Pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                        <View
+                            android:id="@+id/shadow_view5"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="1dp"
+                            android:background="@drawable/dropshadow" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cod_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="45dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/ic_cash_payment"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <RadioButton
+                            android:layout_toRightOf="@id/img4"
+                            android:layoutDirection="rtl"
+                            android:id="@+id/cod"
+                            android:text="Cash on Delivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                        <View
+                            android:id="@+id/shadow_view4"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="1dp"
+                            android:background="@drawable/dropshadow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Have Promo Code?"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/button"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border_radius"
+        android:text="pay"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"/>
+</RelativeLayout>

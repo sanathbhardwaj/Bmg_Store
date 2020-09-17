@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "435307572134",
+    "firebase_url": "https://bmg-store-6799c.firebaseio.com",
+    "project_id": "bmg-store-6799c",
+    "storage_bucket": "bmg-store-6799c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435307572134:android:1524a876017243f90dfd67",
+        "android_client_info": {
+          "package_name": "com.digital.dhanbadbasket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435307572134-hiqi2nkuecodf5u91l8dd4utp6garpbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digital.dhanbadbasket",
+            "certificate_hash": "9de158aa9d26d34f8be052d341018fb8eab0404a"
+          }
+        },
+        {
+          "client_id": "435307572134-ee953348mlgr6ap2re5sden458kd4l4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digital.dhanbadbasket",
+            "certificate_hash": "9c9a1c85251529cd96be5430dc500bc57196b91b"
+          }
+        },
+        {
+          "client_id": "435307572134-8pimla7vtt224vsd8ea6o3pg8bqej4tj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRtVrR4XWUuLt0-9iwLDBl0aEvl8yFLwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435307572134-8pimla7vtt224vsd8ea6o3pg8bqej4tj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

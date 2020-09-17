@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.digital.dhanbadbasket.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:text="Account"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/appbar"
+        android:background="@drawable/dropshadow" />
+
+    <ScrollView
+        android:layout_below="@id/shadow_view"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="50dp">
+
+                <RelativeLayout
+                    android:id="@+id/saved_address_l"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/a"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_address"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/a"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Saved Addresses"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/share_app_1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/b"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_share"/>
+
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/b"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/ibhy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share App"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:id="@+id/blk"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_accept"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/blk"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/khvg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms and conditions"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:id="@+id/bh"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_privacy_policy"/>
+                    <TextView
+                        android:layout_marginStart="15dp"
+                        android:layout_toRightOf="@id/bh"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/khjk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy policy"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/j"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_about_us"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/j"
+                        android:layout_marginStart="15dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/klop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="About us"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_centerVertical="true"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/version"
+                android:textSize="11sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 0.0.1"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

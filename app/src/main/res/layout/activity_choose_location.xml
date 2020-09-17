@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.digital.dhanbadbasket.ChooseLocationActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:textSize="26sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Select Location"/>
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/text"
+            android:orientation="horizontal"
+            android:id="@+id/current_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Current Location"
+            android:elevation="8dp"
+            android:background="@drawable/button_border_radius"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/i"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ic_gps_white"/>
+
+            <TextView
+                android:layout_marginStart="9dp"
+                android:layout_toRightOf="@id/i"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Location"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/current_location"
+            android:orientation="horizontal"
+            android:id="@+id/other_location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Current Location"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@drawable/edit_txt_background">
+
+            <ImageView
+                android:id="@+id/ic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_search"/>
+
+            <TextView
+                android:layout_marginStart="9dp"
+                android:layout_toRightOf="@id/ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Location"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

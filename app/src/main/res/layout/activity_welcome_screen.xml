@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5.0"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.3">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop">
+            </androidx.viewpager.widget.ViewPager>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.63">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/w"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online groceries, vegetables etc.\nHome delivery in your city."/>
+
+            <Button
+                android:elevation="10dp"
+                android:layout_below="@id/w"
+                android:id="@+id/location"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="336dp"
+                android:layout_height="52dp"
+                android:background="@drawable/button_border_radius"
+                android:text="Get Started"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+            <!--            <LinearLayout-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_below="@id/location"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_centerHorizontal="true">-->
+            <!--                <TextView-->
+            <!--                    android:fontFamily="@font/poppins"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Already have account?"-->
+            <!--                    android:layout_centerHorizontal="true"/>-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/login"-->
+            <!--                    android:fontFamily="@font/poppins_semibold"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text=" Login"-->
+            <!--                    android:textColor="@color/colorAccent"/>-->
+            <!--            </LinearLayout>-->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
